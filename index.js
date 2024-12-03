@@ -8,7 +8,7 @@ require('dotenv').config(); // Load environment variables from .env file
 
 // Create an Express app
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 // Set up PostgreSQL database connection using environment variables
 const pool = new Pool({
